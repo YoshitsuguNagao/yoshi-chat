@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/YoshitsuguNagao/yoshi-chat/issues"
   },
-  "homepage": "https://github.com/YoshitsuguNagao/yoshi-chat#readme"
+  "homepage": "https://github.com/YoshitsuguNagao/yoshi-chat#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }

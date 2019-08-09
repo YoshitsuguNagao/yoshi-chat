@@ -1,5 +1,11 @@
+require('dotenv').config();
+
 // Make connection
-const socket = io.connect('https://yoshi-chat-app.herokuapp.com/');
+// const socket = io.connect('http://localhost:4000');
+const socket = io.connect('process.env.PUBLIC_DOMAIN');
+// console.log('socket in chat', socket)
+// console.log('io in chat', io)
+// console.log('process.env.PUBLIC_DOMAIN', process.env.PUBLIC_DOMAIN)
 
 // Query DOM
 const message = document.getElementById('message');
@@ -9,7 +15,6 @@ const output = document.getElementById('output');
 const feedback = document.getElementById('feedback');
 
 // Emit events
-
 btn.addEventListener("click", function() {
   socket.emit('chat', {
     message: message.value,
@@ -28,5 +33,5 @@ socket.on('chat', function(data) {
 })
 
 socket.on('typing', function(data) {
-  feedback.innerHTML = '<p><em>' + data + 'is typing message...</em><p>';
+  feedback.innerHTML = '<p><em>' + data + ' is typing message...</em><p>';
 })

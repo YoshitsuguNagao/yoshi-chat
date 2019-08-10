@@ -1,10 +1,7 @@
-require('dotenv').config();
+// require('dotenv').config()
 
 // Make connection
-// const socket = io.connect('http://localhost:4000');
-const socket = io.connect('process.env.PUBLIC_DOMAIN');
-// console.log('socket in chat', socket)
-// console.log('io in chat', io)
+const socket = io.connect('https://yoshi-chat-app.herokuapp.com');
 // console.log('process.env.PUBLIC_DOMAIN', process.env.PUBLIC_DOMAIN)
 
 // Query DOM
